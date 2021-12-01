@@ -1,0 +1,72 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+<br>
+<div class="jumbotron col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center" style="width:70%;height:200%; padding:20px; border-radius: 25px; text-align: center;">
+    <h1 class="display-4">Covid 19 Test Result</h1>
+    {% if result=="Positive" %}
+      <img src="static\images\positive.png" width="300em" height="200em">
+    {% else %}
+      <img src="static\images\negative.png" width="300em" height="200em">
+    {% endif %}
+    <br>
+    <br>
+    <p class="lead">The test result shows that you are tested {{result}} for Covid-19.</p>
+    <hr class="my-4">
+    <p>Click the below download button to download the test report.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="{{ url_for('.download_file') }}" role="button">Download Result</a>
+    </p>
+</div>
+<br>
+
+{% if result=="Positive" %}
+  <div class="container bg-light p-2 text-dark bg-opacity-50" style="width:100%;height:300%; padding:20px; border-radius: 25px; background-color:mintcream">
+    <div class="banner">
+      <h4 style="text-align:center; font-family:'Lucida Console', 'Courier New', monospace;">DON'T GET PANIC FOR GETTING COVID-19 POSITIVE. YOU WILL BE BETTER VERY SOON. FOLLOW THE MEASURES AND TAKE PROPER DIET TO FIGHT AGAINST COVID-19 AND BECAME THE COVID-19 WARRIOR.</h4>
+      <br>
+      <img src="static\images\covid_fight.png" width="500em" height="300em" class="center">
+    </div>
+    <br>
+    <div class="btn-group" role="group" aria-label="Basic example" style="position: absolute; left: 270px;">
+      <a href = "/measures">
+          <button type="button" class="btn btn-primary btn-sm btn-block">Click here to see the Measures to be follow during Quarantine Periods
+          </button>
+      </a>
+      <button class="btn btn-light"></button>
+      <a href = "/foods">
+        <button type="button" class="btn btn-primary btn-sm btn-block">Click here to see the Foods to be taken during Quarantine Periods
+        </button>
+      </a>
+      
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+{% else %}
+  <div class="container bg-light p-2 text-dark bg-opacity-50" style="width:100%;height:300%; padding:20px; border-radius: 25px; background-color:mintcream">
+    <div class="banner">
+      <h4 style="text-align:center; font-family:'Lucida Console', 'Courier New', monospace;">THANK GOD FOR GETTING COVID-19 RESULT AS NEGATIVE. WE HIGHLY RECOMMEND YOU TO GET VACCINATE IMMEDIATELY IN YOUR NEARBY VACCINATION CENTERS. DON'T HESITATE TO GET VACCINATE.</h4>
+    </div>
+    <br>
+    <a href = "/vaccine">
+      <button type="button" class="btn btn-primary btn-sm btn-block">Get Nearby Vaccination Centers
+      </button>
+    </a>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+{% endif %}
+
+{% endblock %}

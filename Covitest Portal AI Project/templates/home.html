@@ -1,0 +1,85 @@
+{% extends 'main.html' %}
+{% block content %}
+   
+<br>
+<br>
+<div class="banner">
+    <h4 style="text-align:center; font-family:'Lucida Console', 'Courier New', monospace;">TAKE COVID-19 TEST DIGITALLY BY ENTERING THE CORRECT FOLLOWING SYMPTOMS YO HAVE. CLICK THE TEST BUTTON AFTER ENTERING THE CORRECT SYMPTOMS.</h4>
+</div>
+  <br>             
+<div class="container bg-light p-2 text-dark bg-opacity-50" style="width:35%;height:200%; padding:20px; border-radius: 25px;">
+    <br>
+    <div class="banner">
+        <h5 style="text-align:center">Take Covid-19 Test</h5>
+    </div>             
+    <form method='POST'>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Do you have the symptom of Cough?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="cough">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Do you have Fever?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="fever">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Do you have the symptom of Sore Throat?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="sore-throat">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Do you have Shortness in Breathing?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="breathing">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Do you have Headache?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="headache">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Gender</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Select your Gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Are you above 60 years old?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="age">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Did you recently go abroad or come from abroad?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="abroad">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Did you recently contact with any Covid-19 patient?</label>
+            <select class="form-control" id="inputPassword4"  placeholder="Say Yes or No" name="contact">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+        </div> <br>
+        <div class="d-grid gap-2 col-6 mx-auto" style="padding:10px"> 
+            <button type="submit" class="btn btn-primary btn-sm btn-block">Test</button>
+        </div>
+    </form>
+</div>
+    
+{% endblock %}

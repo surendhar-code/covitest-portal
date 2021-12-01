@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container bg-light p-2 text-dark bg-opacity-50" style="width:35%;height:200%; padding:20px; border-radius: 25px;">
+    <br>
+    <div class="banner">
+        <h5 style="text-align:center">Find Near By Hospitals</h5>
+    </div>
+    <form method='POST'>
+        <br>
+        <div class="form-group">
+        <label for="exampleInputEmail1">Enter your Location Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Location Name" name="place">
+        </div> <br>
+        <div class="d-grid gap-2 col-6 mx-auto" style="padding:10px">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        
+    </form>
+
+    {% for hospital in hospitals_list %}
+        {{hospital}}
+        
+    {% endfor %}
+
+
+
+{% endblock %}
